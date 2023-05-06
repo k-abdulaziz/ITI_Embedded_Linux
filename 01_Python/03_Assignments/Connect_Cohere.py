@@ -1,7 +1,7 @@
 import cohere
 
 # Replace 'YOUR_API_KEY' with your actual API key
-co = cohere.Client('3pbIU5yOhATFLrAS7eSOCVE8M7N0YhPrIIijXOfO')
+co = cohere.Client('YOUR_API_KEY')
 
 # Get input from user
 prompt = input('Enter your prompt: ')
@@ -10,7 +10,7 @@ prompt = input('Enter your prompt: ')
 response = co.generate(
   model='command-xlarge-nightly',
   prompt=prompt,
-  max_tokens=300,
+  max_tokens=100,
   temperature=0.9,
   k=0,
   stop_sequences=[],
