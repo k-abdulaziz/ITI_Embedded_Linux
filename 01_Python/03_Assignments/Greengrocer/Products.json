@@ -1,0 +1,46 @@
+{
+  "fruits": {
+    "banana": {
+      "price": 12.5,
+      "amount": 29.0
+    },
+    "apple": {
+      "price": 40.0,
+      "amount": 82.5
+    },
+    "mango": {
+      "price": 30.0,
+      "amount": 60.125
+    },
+    "orange": {
+      "price": 8.0,
+      "amount": 120.0
+    },
+    "strawberry": {
+      "price": 15.0,
+      "amount": 30.8
+    }
+  },
+  "vegetables": {
+    "tomato": {
+      "price": 6,
+      "amount": 50.375
+    },
+    "potato": {
+      "price": 5,
+      "amount": 110.5
+    },
+    "cucumber": {
+      "price": 5.5,
+      "amount": 85.65
+    },
+    "eggplant": {
+      "price": 8.25,
+      "amount": 44.475
+    },
+    "carrot": {
+      "price": 4.5,
+      "amount": 26.5
+    }
+  }
+}
