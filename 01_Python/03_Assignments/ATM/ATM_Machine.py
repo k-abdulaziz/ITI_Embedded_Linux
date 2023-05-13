@@ -38,11 +38,12 @@ def select_language():
         print("Please Select Language:")
         print("1. العربية\n2. English")
         selected_language = input()
+        system('cls')
         if selected_language == '1':
-            print("!بنك الخير والبركة يرحب بك")
+            print("!بنك الخير والبركة يرحب بك\n")
             return "Arabic"
         elif selected_language == '2':
-            print("Welcome to Bank of Khair & Baraka!")
+            print("Welcome to Bank of Khair & Baraka!\n")
             return "English"
         else:
             print("Invalid Input")
@@ -67,12 +68,15 @@ def atm_menu(selected_language, account_index):
 
         elif selected_option == '2':
             withdrawn_amount = float(input(Languages[selected_language]['amount_to_withdraw']))
-            if withdrawn_amount <= Cards_List[account_index]['Balance']:
+            if withdrawn_amount <= Cards_List[account_index]['Balance'] and withdrawn_amount <= 5000:
                 Cards_List[account_index]['Balance'] -= withdrawn_amount
                 print(Languages[selected_language]['withdrawn_message'].format(Cards_List[account_index]['Balance']))
+            elif withdrawn_amount > 5000:
+                print(Languages[selected_language]['max_amount_exceeds_message'])
             else:
                 print(Languages[selected_language]['insufficient_balance_message'])
             input(Languages[selected_language]['enter_to_continue_message'])
+
             
         elif selected_option == '3':
             deposited_amount = float(input(Languages[selected_language]['amount_to_deposit']))
